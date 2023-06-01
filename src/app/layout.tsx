@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 
 import theme from "@/styles/theme";
 import Header from "@/components/layout/header";
+import Main from "@/components/layout/main";
 
 export default function RootLayout({
   children,
@@ -14,7 +15,7 @@ export default function RootLayout({
       <body style={{ margin: 0 }}>
         <ThemeProvider theme={theme}>
           <Header />
-          {children}
+          <Main>{children}</Main>
         </ThemeProvider>
       </body>
     </html>

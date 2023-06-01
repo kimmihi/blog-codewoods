@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { HEADER_HEIGHT } from "@/styles/constant";
 
 const Container = styled.div`
+  position: fixed;
+  top: 0;
   width: 100%;
   height: ${HEADER_HEIGHT}px;
   display: flex;
