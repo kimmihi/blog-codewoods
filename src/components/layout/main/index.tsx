@@ -7,14 +7,11 @@ interface MainProps {
 }
 
 const Container = styled.main`
-  width: 100%;
-  margin: ${HEADER_HEIGHT}px 128px 0px 128px;
-  padding: 24px 48px;
-
-  @media screen and (max-width: ${BreakPoints.md}px) {
-    margin: ${HEADER_HEIGHT}px 32px 0px 32px;
-    padding: 6px 12px;
-  }
+  margin-top: ${HEADER_HEIGHT}px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: clamp(1.75rem, 2.75rem + 2.5vw, 6.25rem);
+  padding-right: clamp(1.75rem, 2.75rem + 2.5vw, 6.25rem);
 `;
 
 export default function Main({ children }: MainProps) {

@@ -1,7 +1,5 @@
 "use client";
-import { ThemeProvider } from "styled-components";
-
-import theme from "@/styles/theme";
+import ClientThemeProvider from "@/components/layout/client-theme-provider";
 import Header from "@/components/layout/header";
 import Main from "@/components/layout/main";
 
@@ -13,10 +11,10 @@ export default function RootLayout({
   return (
     <html>
       <body style={{ margin: 0 }}>
-        <ThemeProvider theme={theme}>
+        <ClientThemeProvider>
           <Header />
           <Main>{children}</Main>
-        </ThemeProvider>
+        </ClientThemeProvider>
       </body>
     </html>
   );
