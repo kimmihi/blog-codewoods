@@ -11,6 +11,7 @@ interface PreviewCardProps {
 const Card = styled.div`
   position: relative;
   height: 500px;
+  max-width: 500px;
   border-radius: 16px;
   background-color: #fff;
   display: flex;

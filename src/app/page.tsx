@@ -7,15 +7,16 @@ import { BreakPoints } from "@/styles/constant";
 
 const GridContainer = styled.div`
   display: grid;
-  grid-gap: 32px;
+  justify-items: center;
+  grid-gap: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
   margin-top: 64px;
-  grid-template-columns: repeat(3, 1fr);
-  @media screen and (max-width: ${BreakPoints.xl}px) {
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  /* @media screen and (max-width: ${BreakPoints.xl}px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media screen and (max-width: ${BreakPoints.sm}px) {
     grid-template-columns: repeat(1, 1fr);
-  }
+  } */
 `;
 
 const summary =
