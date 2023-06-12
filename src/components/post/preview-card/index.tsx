@@ -8,34 +8,30 @@ interface PreviewCardProps {
   postMatter: PostMatter;
 }
 
-const Card = styled.div`
+const Card = styled.article`
   position: relative;
-  height: 500px;
-  max-width: 500px;
+  max-width: 37rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border-radius: 16px;
+  padding: 1.25rem;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   border: 1px solid #e6e6e6;
+  word-break: break-word;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(250, 250, 250);
+  }
 `;
 
-const NoImage = styled.div`
+const ImageBox = styled.a`
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 60%;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
-  background-color: #cccccc;
+  min-height: 200px;
 `;
 
-const PostMatterContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  padding: 0px 16px;
-`;
 const Title = styled.h2``;
 const Summary = styled.p`
   display: -webkit-box;
@@ -49,23 +45,39 @@ const Summary = styled.p`
 
 const Date = styled.p`
   color: #8c8c8c;
+  margin-top: 5rem;
+  margin-block-start: 1rem;
   font-size: clamp(0.8rem, 1.5vw, 1rem);
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  flex: auto;
+  overflow-wrap: break-word;
+  margin-top: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+`;
 
 export default function PreviewCard({ postMatter }: PreviewCardProps) {
   return (
     <Card>
-      <NoImage />
-      <PostMatterContainer>
-        <Wrapper>
-          <Title>{postMatter.title}</Title>
-          <Summary>{postMatter.summary}</Summary>
-        </Wrapper>
+      <ImageBox>
+        {postMatter.thumb_nail && (
+          <Image
+            src={postMatter.thumb_nail}
+            alt={postMatter.title}
+            fill={true}
+            style={{
+              objectFit: "contain",
+              borderRadius: "6px",
+            }}
+          />
+        )}
+      </ImageBox>
+      <Wrapper>
+        <Title>{postMatter.title}</Title>
+        <Summary>{postMatter.summary}</Summary>
+      </Wrapper>
 
-        <Date>{postMatter.date}</Date>
-      </PostMatterContainer>
+      <Date>{postMatter.date}</Date>
     </Card>
   );
 }
