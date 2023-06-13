@@ -6,7 +6,13 @@ export default function Document() {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <body>
+      <body
+        style={{
+          boxSizing: "border-box",
+          margin: 0,
+          padding: 0,
+        }}
+      >
         <Main />
         <NextScript />
       </body>

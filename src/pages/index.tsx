@@ -17,11 +17,10 @@ interface HomeProps {
 const GridContainer = styled.div`
   position: relative;
   display: grid;
-  justify-items: center;
   grid-gap: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
   margin-top: 32px;
   margin-inline: auto;
-  padding-inline: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+  padding-inline: clamp(0, 1.2rem + 0.89vw, 2rem);
   grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
 `;
 
