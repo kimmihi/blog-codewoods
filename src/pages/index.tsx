@@ -1,5 +1,6 @@
 import type { PostMatter } from "@/types/blog";
 
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import styled from "styled-components";
 import dayjs from "dayjs";
@@ -42,7 +43,13 @@ export default function Home({ posts }: HomeProps) {
   return (
     <GridContainer>
       {postList.map((post) => (
-        <PreviewCard key={post.id} postMatter={post} />
+        <Link
+          key={post.id}
+          href={`/posts/${post.id}`}
+          style={{ textDecoration: "none", display: "grid" }}
+        >
+          <PreviewCard postMatter={post} />
+        </Link>
       ))}
     </GridContainer>
   );

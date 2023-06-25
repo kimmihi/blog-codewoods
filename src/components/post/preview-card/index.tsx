@@ -19,6 +19,7 @@ const Card = styled.article`
   background-color: #fff;
   border: 1px solid #e6e6e6;
   word-break: break-word;
+  text-decoration: none;
   cursor: pointer;
   &:hover {
     background-color: rgb(250, 250, 250);
@@ -32,7 +33,9 @@ const ImageBox = styled.a`
   min-height: 200px;
 `;
 
-const Title = styled.h2``;
+const Title = styled.h2`
+  color: #262626;
+`;
 const Summary = styled.p`
   display: -webkit-box;
   overflow: hidden;
@@ -41,6 +44,7 @@ const Summary = styled.p`
   font-size: clamp(0.75rem, 1.5vw, 1rem);
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
+  color: #262626;
 `;
 
 const Date = styled.p`
