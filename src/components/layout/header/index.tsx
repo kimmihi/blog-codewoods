@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Link from "next/link";
+
 import { HEADER_HEIGHT } from "@/styles/constant";
 
 const Container = styled.div`
@@ -24,7 +26,9 @@ const Title = styled.h1`
 const Header = () => {
   return (
     <Container>
-      <Title>codewoods</Title>
+      <Link href="/" style={{ textDecoration: "none" }}>
+        <Title>codewoods</Title>
+      </Link>
     </Container>
   );
 };
