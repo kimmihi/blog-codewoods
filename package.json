@@ -19,6 +19,7 @@
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-is": "^18.2.0",
     "react-markdown": "^8.0.7",
     "react-syntax-highlighter": "^15.5.0",
     "remark-gfm": "^3.0.1",
@@ -27,6 +28,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/react-is": "^18",
     "@types/react-syntax-highlighter": "^15.5.7",
     "@types/styled-components": "^5.1.26",
     "@yarnpkg/pnpify": "^4.0.0-rc.48"

@@ -31,6 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:20.2.5"],\
             ["@types/react", "npm:18.2.7"],\
             ["@types/react-dom", "npm:18.2.4"],\
+            ["@types/react-is", "npm:18.2.1"],\
             ["@types/react-syntax-highlighter", "npm:15.5.7"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.48"],\
@@ -41,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:13.2.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"],\
             ["react-markdown", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:8.0.7"],\
             ["react-syntax-highlighter", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:15.5.0"],\
             ["remark-gfm", "npm:3.0.1"],\
@@ -813,6 +815,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-react-dom-npm-18.2.4-5d62ac2096-8301f35cf1.zip/node_modules/@types/react-dom/",\
           "packageDependencies": [\
             ["@types/react-dom", "npm:18.2.4"],\
+            ["@types/react", "npm:18.2.7"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/react-is", [\
+        ["npm:18.2.1", {\
+          "packageLocation": "./.yarn/cache/@types-react-is-npm-18.2.1-b5cfa2d08b-b44c3262ef.zip/node_modules/@types/react-is/",\
+          "packageDependencies": [\
+            ["@types/react-is", "npm:18.2.1"],\
             ["@types/react", "npm:18.2.7"]\
           ],\
           "linkType": "HARD"\
@@ -1634,6 +1646,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:20.2.5"],\
             ["@types/react", "npm:18.2.7"],\
             ["@types/react-dom", "npm:18.2.4"],\
+            ["@types/react-is", "npm:18.2.1"],\
             ["@types/react-syntax-highlighter", "npm:15.5.7"],\
             ["@types/styled-components", "npm:5.1.26"],\
             ["@yarnpkg/pnpify", "npm:4.0.0-rc.48"],\
@@ -1644,6 +1657,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["next", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:13.2.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:18.2.0"],\
+            ["react-is", "npm:18.2.0"],\
             ["react-markdown", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:8.0.7"],\
             ["react-syntax-highlighter", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:15.5.0"],\
             ["remark-gfm", "npm:3.0.1"],\
@@ -5629,13 +5643,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@emotion/unitless", "npm:0.7.5"],\
             ["@types/react", "npm:18.2.7"],\
             ["@types/react-dom", "npm:18.2.4"],\
-            ["@types/react-is", null],\
+            ["@types/react-is", "npm:18.2.1"],\
             ["babel-plugin-styled-components", "virtual:0ac15bcdf20463e9e7f02f7a3681b76e01e036b9d13c6659eb9eccc6472576b1d9f521c914cffd74a0714cbaa7bf647134b1297b066b6e4010095d83f39b134b#npm:2.1.3"],\
             ["css-to-react-native", "npm:3.2.0"],\
             ["hoist-non-react-statics", "npm:3.3.2"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:7e8dc557f47ca10f943608825d87fbd9d819701eccdd1accdaa46725dd2e8f60d48d564b67be4379f8c902db51f15ab94ebed32d8878bdb011b387da8d187d27#npm:18.2.0"],\
-            ["react-is", null],\
+            ["react-is", "npm:18.2.0"],\
             ["shallowequal", "npm:1.1.0"],\
             ["supports-color", "npm:5.5.0"]\
           ],\
