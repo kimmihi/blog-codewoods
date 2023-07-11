@@ -47,10 +47,13 @@ const Container = styled.article`
   position: relative;
   flex-grow: 999;
   flex-basis: 0;
-  width: clamp(16rem, 95vw, 85rem);
-  max-width: min(50rem, 100%);
+
   margin-inline: auto;
-  padding-inline: clamp(1.375rem, 1.2rem + 0.89vw, 2rem);
+  padding-inline: clamp(1.275rem, 1.2rem + 0.89vw, 2rem);
+  @media screen and (min-width: 775px) {
+    width: clamp(14rem, 95vw, 85rem);
+    max-width: min(50rem, 100%);
+  }
 `;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
