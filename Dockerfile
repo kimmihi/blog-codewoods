@@ -1,19 +1,19 @@
-FROM node:16-alpine as builder
-
+# Install dependencies only when needed
+FROM node:18-alpine
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY package.json ./
-COPY yarn.lock ./
-COPY .pnp.cjs ./
-COPY .pnp.loader.mjs ./
-COPY .yarnrc.yml ./
-COPY .yarn .yarn
+COPY .yarn ./.yarn
+COPY .pnp.cjs .yarnrc.yml package.json yarn.lock* ./
+RUN yarn set version berry
 RUN yarn install --immutable
 
 COPY . .
 
 RUN yarn build
 
-CMD ["node", "-r", "./.pnp.cjs", "server.js"]
+EXPOSE 3000
 
 
+CMD ["yarn","start"]
