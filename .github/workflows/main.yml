@@ -2,7 +2,10 @@ name: Blog Codewoods
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "main"
+    tags:
+      - "*"
 
 # 환경설정
 env:
