@@ -9,7 +9,6 @@ import matter from "gray-matter";
 import PreviewCard from "@/components/post/preview-card";
 
 import { getBlogPosts } from "@/apis/post";
-import { BreakPoints } from "@/styles/constant";
 
 interface HomeProps {
   posts: string[];
@@ -26,7 +25,6 @@ const GridContainer = styled.div`
 `;
 
 export default function Home({ posts }: HomeProps) {
-  const [postMatters, setPostMatters] = useState<PostMatter[][]>([[]]);
   const [postList, setPostList] = useState<PostMatter[]>([]);
 
   useEffect(() => {
@@ -43,13 +41,7 @@ export default function Home({ posts }: HomeProps) {
   return (
     <GridContainer>
       {postList.map((post) => (
-        <Link
-          key={post.id}
-          href={`/posts/${post.id}`}
-          style={{ textDecoration: "none", display: "grid" }}
-        >
-          <PreviewCard postMatter={post} />
-        </Link>
+        <PreviewCard key={post.id} postMatter={post} />
       ))}
     </GridContainer>
   );

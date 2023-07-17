@@ -1,5 +1,6 @@
 import type { PostMatter } from "@/types/blog";
 
+import Link from "next/link";
 import Image from "next/image";
 
 import styled from "styled-components";
@@ -76,12 +77,16 @@ export default function PreviewCard({ postMatter }: PreviewCardProps) {
           />
         )}
       </ImageBox>
-      <Wrapper>
-        <Title>{postMatter.title}</Title>
-        <Summary>{postMatter.summary}</Summary>
-      </Wrapper>
-
-      <Date>{postMatter.date}</Date>
+      <Link
+        href={`/posts/${postMatter.id}`}
+        style={{ textDecoration: "none", display: "grid" }}
+      >
+        <Wrapper>
+          <Date>{postMatter.date}</Date>
+          <Title>{postMatter.title}</Title>
+          <Summary>{postMatter.summary}</Summary>
+        </Wrapper>
+      </Link>
     </Card>
   );
 }

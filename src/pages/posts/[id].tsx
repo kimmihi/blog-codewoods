@@ -47,7 +47,7 @@ const Container = styled.article`
   position: relative;
   flex-grow: 999;
   flex-basis: 0;
-
+  padding: 3rem 0px;
   margin-inline: auto;
   padding-inline: clamp(1.275rem, 1.2rem + 0.89vw, 2rem);
   @media screen and (min-width: 775px) {

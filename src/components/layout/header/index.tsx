@@ -19,7 +19,7 @@ const Container = styled.div`
 
 const Title = styled.h1`
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 900;
   color: ${(props) => props.theme.colors.main};
 `;
 
