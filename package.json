@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
+    "predeploy": "npm run build",
+    "deploy": "touch out/.nojekyll && gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "next lint"
   },
@@ -31,7 +33,8 @@
     "@types/react-is": "^18",
     "@types/react-syntax-highlighter": "^15.5.7",
     "@types/styled-components": "^5.1.26",
-    "@yarnpkg/pnpify": "^4.0.0-rc.48"
+    "@yarnpkg/pnpify": "^4.0.0-rc.48",
+    "gh-pages": "^5.0.0"
   },
   "packageManager": "yarn@1.22.1"
 }
