@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/",
+  basePath: "https://kimmihi.github.io/blog-codewoods/",
   reactStrictMode: true,
   compiler: {
     styledComponents: true,

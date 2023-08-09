@@ -2,6 +2,7 @@
   "name": "code-woods",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kimmihi.github.io/blog-codewoods",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
